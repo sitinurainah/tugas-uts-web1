@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Buku - Toko Buku Ceria</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container" style="max-width: 1000px;">
+        <h2>Katalog & Informasi Stok Buku Ajar</h2>
+        <div class="catalog-toolbar">
+            <a class="back-link" href="dashboard.html">&larr; Kembali ke Dashboard</a>
+            <button class="btn" onclick="tambahBarisStok()">+ Tambah Buku Baru</button>
+        </div>
+        <div class="catalog-search">
+            <span aria-hidden="true">⌕</span>
+            <input type="search" id="searchCatalog" placeholder="Cari judul atau kode buku..." oninput="filterCatalog()">
+        </div>
+
+        <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Sampul</th>
+                    <th>Kode Barang</th>
+                    <th>Nama Buku</th>
+                    <th>Deskripsi</th>
+                    <th>Jenis</th>
+                    <th>Edisi</th>
+                    <th>Stok</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody id="bodyStok">
+                <!-- Dimuat dinamis via JavaScript -->
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

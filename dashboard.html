@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Toko Buku Ceria</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="page-header">
+            <div>
+                <span class="eyebrow-dark">Pusat Akun</span>
+                <h2 id="greeting">Selamat Datang</h2>
+            </div>
+            <button class="profile-chip" onclick="window.location.href='index.html'; localStorage.removeItem('userLogin')">
+                <span>👤</span>
+                <span id="profileName">Pembaca</span>
+            </button>
+        </header>
+
+        <section class="hero-banner">
+            <div>
+                <span class="hero-tag">Temukan Bacaan Favoritmu</span>
+                <h3>Koleksi buku untuk<br>setiap ruang belajar</h3>
+                <p>Jelajahi buku pilihan, cek ketersediaan, dan pesan dengan mudah.</p>
+                <a href="stok.html" class="hero-button">Jelajahi Katalog →</a>
+            </div>
+            <div class="hero-books" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Ringkasan toko">
+            <article><strong id="bookCount">5</strong><span>Judul Buku</span></article>
+            <article><strong id="totalStock">1.587</strong><span>Total Stok</span></article>
+            <article><strong>2</strong><span>Pesanan Aktif</span></article>
+        </section>
+        
+        <div class="nav-grid">
+            <a href="stok.html" class="nav-card"><span style="font-size:32px">📚</span><br><span style="display:block;margin-top:12px">Katalog & Stok Buku</span></a>
+            <a href="tracking.html" class="nav-card"><span style="font-size:32px">📦</span><br><span style="display:block;margin-top:12px">Lacak Pengiriman</span></a>
+            <a href="chackout.html" class="nav-card"><span style="font-size:32px">🛒</span><br><span style="display:block;margin-top:12px">Pesan Buku</span></a>
+            <a href="index.html" class="nav-card logout-card" onclick="localStorage.removeItem('userLogin')"><span style="font-size:32px">🚪</span><br><span style="display:block;margin-top:12px">Keluar</span></a>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
